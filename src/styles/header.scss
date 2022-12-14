@@ -1,0 +1,71 @@
+.header {
+  &__overlay {
+    position: absolute;
+    z-index: -1;
+    height: 1178px;
+    width: 71.5%;
+    border-radius: 0 50px 50px 0;
+    background-color: $backgroundHeaderColor;
+    background-image: url(./assets/images/vectorTelegram.svg);
+    background-repeat: no-repeat;
+    background-position: 550px 380px;
+
+    @include to-mobile {
+      border-radius: 0;
+      width: 100%;
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+    padding: 18px 15px;
+    background: transparent;
+    border: 3px solid $borderHeaderButtonColor;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Rubik';
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 150%;
+    color: $fontHeaderButtonColor;
+  }
+
+  &__wrapper {
+    padding-top: 40px;
+    padding-bottom: 114px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 auto;
+    width: 79%;
+
+    @include to-mobile {
+      padding: 20px 10px 50px;
+      width: 100%;
+    }
+  }
+}
+
+.logo {
+  position: relative;
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 160px;
+    font-family: 'Rubik';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: $fontHeaderLogoColor;
+
+    @include to-mobile {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+.errors {
+  display: none;
+
+  &.show {
+    display: block;
+  }
+}

@@ -1,0 +1,138 @@
+.headline {
+  &__wrapper {
+    display: flex;
+    padding-bottom: 144px;
+
+    @include to-mobile {
+      flex-direction: column;
+      padding: 0 10px 100px;
+    }
+  }
+
+  &__heading {
+    padding-top: 10px;
+    margin-bottom: 40px;
+    max-width: 638px;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 122.6%;
+    letter-spacing: 0.04em;
+    color: $fontHeadlineHeadingColor;
+
+    &::first-line {
+      background-color: $backgroundHeadlineFirstlineColor;
+    }
+
+    @include to-mobile {
+      font-size: 24px;
+    }
+  }
+
+  &__telegram {
+    &_marked {
+      color: $fontHeadlineMarkedColor;
+    }
+  }
+}
+
+.left-column {
+  margin-left: 150px;
+  @include to-mobile {
+    margin-left: 0;
+  }
+}
+
+.right-column {
+  position: absolute;
+  top: 140px;
+  right: 16px;
+
+  @include to-mobile {
+    display: none;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 380px;
+
+  &__input-wrapper {
+    position: relative;
+    margin-bottom: 15px;
+    width: 100%;
+    &:last-of-type {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__input-label {
+    position: absolute;
+    top: 20px;
+    left: 14px;
+    width: 24px;
+    height: 20px;
+    background-repeat: no-repeat;
+  }
+
+  &__name {
+    background-image: url(./assets/images/iconUser.png);
+  }
+
+  &__email {
+    background-image: url(./assets/images/iconMail.svg);
+  }
+
+  &__phone {
+    background-image: url(./assets/images/iconPhone.svg);
+  }
+
+  &__input {
+    display: block;
+    padding: 18px 0;
+    padding-left: 50px;
+    width: 100%;
+    background: $backgroundHeadlineInputColor;
+    border: none;
+    outline: none;
+    box-shadow: 5px 5px 20px $boxshadowHeadlineInputColor;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: $fontHeadlineInputColor;
+
+    &:placeholder {
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      color: $fontHeadlinePlaceholderColor;
+    }
+
+    &_error {
+      border: 3px solid $borderHeadlineErrorColor;
+    }
+  }
+
+  &__submit {
+    cursor: pointer;
+    padding: 23px 110px;
+    background: $backgroundHeadlineSubmitColor;
+    box-shadow: 15px 5px 20px $boxshadowHeadlineSubmitColor;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-family: 'Rubik';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    text-transform: uppercase;
+    color: $fontHeadlineSubmitColor;
+
+    @include to-mobile {
+      padding: 20px 30px;
+    }
+  }
+}

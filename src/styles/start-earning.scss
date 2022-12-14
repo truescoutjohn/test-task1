@@ -1,0 +1,103 @@
+.start-earning {
+  @include to-mobile {
+    padding: 0 10px;
+  }
+  &__wrapper {
+    padding-top: 120px;
+    margin: 0 auto;
+    width: 79%;
+
+    @include to-mobile {
+      width: 100%;
+    }
+  }
+
+  &__heading {
+    margin: 0 auto 171px;
+    width: 60%;
+    font-family: 'Rubik';
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 122.6%;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $fontEarningHeadingColor;
+
+    @include to-mobile {
+      width: 100%;
+      margin-bottom: 71px;
+      font-size: 24px;
+    }
+  }
+
+  &__middle-column {
+    position: absolute;
+    top: -119px;
+    left: 6%;
+
+    @include to-mobile {
+      display: none;
+    }
+  }
+}
+
+.column {
+  position: relative;
+  padding: 11px 13px 11px 20px;
+  margin-bottom: 40px;
+  min-width: 300px;
+  width: 390px;
+  min-height: 180px;
+  background: $backgroundEarningColumnColor;
+  box-shadow: 5px 5px 20px $boxshadowEarningColumnColor;
+  border-radius: 5px;
+
+  @include to-mobile {
+    width: 100%;
+  }
+
+  &__heading {
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 122.6%;
+    letter-spacing: 0.07em;
+    color: $fontEarningHeadingColor;
+  }
+
+  &__description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    line-height: 122.6%;
+    letter-spacing: 0.04em;
+    color: $fontEarningDescriptionColor;
+  }
+
+  &__line {
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 180px;
+    background-color: $backgroundEarningLineColor;
+    &_right {
+      right: -2px;
+    }
+    &_left {
+      left: -2px;
+    }
+
+    @include to-mobile {
+      display: none;
+    }
+  }
+}
+
+.column-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+}
